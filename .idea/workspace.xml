@@ -87,8 +87,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TE-DataManagementApp" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -210,6 +210,7 @@
       <workItem from="1568320470090" duration="396000" />
       <workItem from="1568490881549" duration="775000" />
       <workItem from="1568491935864" duration="11926000" />
+      <workItem from="1568577204404" duration="5616000" />
     </task>
     <servers />
   </component>

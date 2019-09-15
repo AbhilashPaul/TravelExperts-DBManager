@@ -10,9 +10,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("customer.fxml"));
+        Parent customerRoot = FXMLLoader.load(getClass().getResource("customer.fxml"));
+        Scene customerScene = new Scene(customerRoot, 700, 550);
+        customerScene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css");
         primaryStage.setTitle("Agent Data Manager");
-        primaryStage.setScene(new Scene(root, 700, 550));
+        primaryStage.setScene(customerScene);
         primaryStage.show();
     }
 

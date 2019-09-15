@@ -26,10 +26,6 @@ public class CustomerController implements Initializable {
     @FXML
     private TableView<Customer> tableCustomer;
 
-    public TableView<Customer> getTableCustomer() {
-        return tableCustomer;
-    }
-
     @FXML
     private TableColumn<Customer, Integer> col_id;
 
@@ -47,18 +43,30 @@ public class CustomerController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //link columns in table view to the properties of customer object
         col_id.setCellValueFactory(new PropertyValueFactory<>("customerID"));
         col_firstname.setCellValueFactory(new PropertyValueFactory<>("customerFirstName"));
         col_lastname.setCellValueFactory(new PropertyValueFactory<>("customerLastName"));
         col_homephone.setCellValueFactory(new PropertyValueFactory<>("customerHomePhone"));
         col_email.setCellValueFactory(new PropertyValueFactory<>("customerEmail"));
+
+        //add a hint to the search box
+        Tooltip searchHint = new Tooltip();
+        searchHint.setText("Enter customer ID or first name and/or last name to retrieve customer record.");
+        txtSearch.setTooltip(searchHint);
     }
 
     ObservableList<Customer> customerList = FXCollections.observableArrayList();
     @FXML
     void onActionBtnSearch(ActionEvent event) {
+        tableCustomer.getItems().clear();
         customerList = CustomerDBHandler.getCustomers(txtSearch.getText());
-        tableCustomer.setItems(customerList);
+        //show an error message if no record was found
+        if(customerList.size() == 0){
+            new Alert(Alert.AlertType.ERROR, "No Record found!").showAndWait();
+        }else { //else, display all of the customer records in the tableview
+            tableCustomer.setItems(customerList);
+        }
     }
 
     @FXML
