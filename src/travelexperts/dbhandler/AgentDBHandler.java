@@ -95,4 +95,24 @@ public class AgentDBHandler {
             return false;
         }
     }
+
+    //this method retrieves the agent password for a given username
+    public static String Login(String usrname) {
+        String password=null;
+        try (Connection connection = DBConnectionManager.getDBConnection();
+             PreparedStatement statement =connection.prepareStatement("SELECT * from agents where AgtUsername =?",
+                     ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);) {
+            statement.setString(1, usrname);
+            try(ResultSet resultSet =statement.executeQuery()){
+                while (resultSet.next()) {
+                    password=resultSet.getString("AgtPassword");
+                }
+            }
+        }
+        catch(SQLException ex){
+            System.out.println(ex.getMessage());
+        }
+        return password;
+    }
+
 }

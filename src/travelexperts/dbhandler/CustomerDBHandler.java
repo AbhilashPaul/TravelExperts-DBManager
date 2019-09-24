@@ -25,7 +25,7 @@ public class CustomerDBHandler {
         } else{                                                         //if user enters a text as input
             String[] search =searchString.split(" ");            //split the strings in the text input
             if (search.length == 1){                                   //if the entry contains only one string
-                fnameSearch= "%"+search[0]+"%";                        //retrieve all list of customers with the input string in first name or last name
+                fnameSearch= "%"+search[0]+"%";                        //retrieve list of customers with the input string in first name or last name
                 lnameSearch= "%"+search[0]+"%";
                 query = "SELECT * FROM customers WHERE CustFirstName LIKE ? OR CustLastName LIKE ? ORDER BY CustFirstName;";
             }else {                                                    //if the input is more than one string

@@ -8,16 +8,15 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    //loads the login page when user start teh application
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent customerRoot = FXMLLoader.load(getClass().getResource("customer.fxml"));
-        Scene customerScene = new Scene(customerRoot, 700, 550);
-        customerScene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css");
-        /*Parent homeRoot = FXMLLoader.load(getClass().getResource("home.fxml"));
-        Scene homeScene = new Scene(homeRoot, 600, 400);
-        homeScene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css");*/
-        primaryStage.setTitle("Agent Data Manager");
-        primaryStage.setScene(customerScene);
+        Parent homeRoot = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Scene loginScene = new Scene(homeRoot, 1000, 650);
+        loginScene.getStylesheets().add("org/kordamp/bootstrapfx/bootstrapfx.css");
+        primaryStage.setTitle("Travel Experts DataBase Manager");
+        primaryStage.setScene(loginScene);
+        primaryStage.setMaximized(false);
         primaryStage.show();
     }
 

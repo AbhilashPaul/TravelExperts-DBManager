@@ -1,44 +1,43 @@
 package travelexperts.main;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
+import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
 public class HomeController {
 
     @FXML
-    private Button btnCustomers;
+    private JFXButton btnCustomers, btnPackage, btnAgents;
 
     @FXML
-    private Button btnPackages;
+    private AnchorPane displayPane;
 
+    //when user clicks on customer button, load customer layout on the right pane
     @FXML
-    private Button btnAgents;
-
-    @FXML
-    void onActionBtnAgents(ActionEvent event) throws IOException {
-        Stage customerStage = null;
+    void onActionBtnCustomers(ActionEvent event) throws IOException {
         Parent customerRoot = FXMLLoader.load(getClass().getResource("customer.fxml"));
-        Scene customerScene = new Scene(customerRoot, 700, 550);
-        customerStage.setScene(customerScene);
-        customerStage.showAndWait();
+        displayPane.getChildren().clear();
+        displayPane.getChildren().addAll(customerRoot);
     }
 
-    @FXML
-    void onActionBtnCustomers(ActionEvent event) {
-
-    }
-
+    //when user clicks on customer button, load package layout on right pane
     @FXML
     void onActionBtnPackages(ActionEvent event) {
 
     }
+
+    //when user clicks on customer button, load agents layout on right pane
+    @FXML
+    void onActionBtnAgents(ActionEvent event) throws IOException {
+        Parent agentRoot = FXMLLoader.load(getClass().getResource("agent.fxml"));
+        displayPane.getChildren().clear();
+        displayPane.getChildren().addAll(agentRoot);
+    }
+
 
 }
 

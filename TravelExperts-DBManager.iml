@@ -10,5 +10,7 @@
     <orderEntry type="library" name="mysql:mysql-connector-java:8.0.17" level="project" />
     <orderEntry type="library" name="org.kordamp.bootstrapfx:bootstrapfx-core:0.2.4" level="project" />
     <orderEntry type="library" name="com.jfoenix:jfoenix:9.0.5" level="project" />
+    <orderEntry type="library" name="controlsfx-11.0.0" level="project" />
+    <orderEntry type="library" name="jbcrypt-0.4" level="project" />
   </component>
 </module>

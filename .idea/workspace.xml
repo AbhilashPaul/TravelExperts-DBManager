@@ -57,8 +57,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,19 +88,23 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\826747\IdeaProjects\Day6Exercise\src\exercise6\main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="travelexperts.dbmanager.models" />
       <recent name="exercise6.main" />
       <recent name="exercise6.dbhandler" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\826747\IdeaProjects\Day6Exercise\src\exercise6\main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\826747\IdeaProjects\TravelExperts-DBManager\libs" />
+      <recent name="C:\Users\826747\IdeaProjects\TravelExperts-DBManager\src\travelexperts\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -214,6 +218,12 @@
       <workItem from="1568583223707" duration="3077000" />
       <workItem from="1568854778651" duration="5018000" />
       <workItem from="1568902068462" duration="7500000" />
+      <workItem from="1568924900785" duration="2369000" />
+      <workItem from="1569094839395" duration="13776000" />
+      <workItem from="1569123782004" duration="3007000" />
+      <workItem from="1569253581739" duration="11247000" />
+      <workItem from="1569290398038" duration="3815000" />
+      <workItem from="1569294271591" duration="1849000" />
     </task>
     <servers />
   </component>
